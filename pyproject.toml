@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "awevolve"
+version = "0.1.0"
+description = "Point an agent at a file and a command that scores it, and watch it improve — keeping every version and the score it earned."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+# No dependencies, and that is a feature. The agent is a COMMAND you configure
+# (stdin: prompt, stdout: the new file), so this works with any coding agent
+# rather than pinning you to one SDK.
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+awevolve = "awevolve.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/Aitherium/awevolve"
+Documentation = "https://github.com/Aitherium/awevolve#readme"
+Repository = "https://github.com/Aitherium/awevolve.git"
+Issues = "https://github.com/Aitherium/awevolve/issues"
+
+[tool.setuptools]
+packages = ["awevolve"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W"]
+ignore = ["E501", "E402", "E741"]
+
+[tool.ruff.lint.isort]
+# The monorepo gate lints with `ruff --isolated`, which cannot see this file
+# and therefore treats `awevolve` as third-party. Without this line the two
+# tools disagree and each "fixes" what the other just wrote. The monorepo
+# gate is the one that blocks a merge, so it wins.
+known-third-party = ["awevolve"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
