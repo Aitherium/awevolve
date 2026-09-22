@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1",
+  "name": "awevolve",
+  "description": "Point an agent at a file and a command that scores it, and let it improve.",
+  "url": "https://aitherium.github.io/awevolve/",
+  "repository": "https://github.com/Aitherium/awevolve",
+  "kind": "tool",
+  "status": "no-pages",
+  "adopt": "Point it at a file and a command that scores that file, and watch an agent improve it -- keeping every version and the score it earned.",
+  "pairs_with": [
+    "awdk",
+    "awrun",
+    "awgit",
+    "awm",
+    "awpredict"
+  ],
+  "includes": [],
+  "metrics": {
+    "files": {
+      "value": 19,
+      "as_of": "2026-09-22T02:07:53-07:00"
+    },
+    "tests": {
+      "value": 1,
+      "as_of": "2026-09-22T02:07:53-07:00"
+    }
+  }
+}
