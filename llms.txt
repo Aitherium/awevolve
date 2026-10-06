@@ -1,0 +1,31 @@
+# awevolve
+
+> Point an agent at a file and a command that scores it, and let it improve.
+
+Automated improvement loops fail silently and look identical while doing it. A run that explored honestly and found nothing produces the same logs, the same records and the same stop reason as a run that changed nothing at all -- there is no exception to catch and no failing request, so the loop keeps running and a human periodically concludes the search space is just hard. And the loops that DO work are usually one-shot generators: the model is asked for a candidate, handed no history, and never allowed to test its own idea before committing it.
+
+## Install
+
+```
+pip install awevolve
+```
+
+## Use it in 30 seconds
+
+Point it at a file and a command that scores that file, and watch an agent improve it -- keeping every version and the score it earned.
+
+## Composes with
+
+- [awdk](https://aitherium.github.io/awdk/) — Build AI agent fleets — 3 lines, any backend, local or cloud.
+- [awrun](https://aitherium.github.io/awrun/) — A priority-aware queue and dispatcher for agentic runs and ad-hoc CI builds. It also judges whether the runner pool is big enough for the queue it is draining, and can ask a host to grow it -- reserving capacity is zero-sum, so a saturated pool needs more of it, not a different share of it.
+- [awgit](https://aitherium.github.io/awgit/) — Semantic version control on top of git — edit-ops and leases.
+- [awm](https://aitherium.github.io/awm/) — A portable, scoped agent memory.
+- [awpredict](https://aitherium.github.io/awpredict/) — Predict what your environment does next, and how surprised you were.
+
+## Where it lives
+
+- Repo: https://github.com/Aitherium/awevolve
+
+This repository is mirrored from the AitherOS monorepo by `.github/workflows/sync-awevolve.yml`; hand edits made here are overwritten on the next sync — change the source instead.
+
+Everything Aitherium, in one file for agents: https://aitherium.com/llms.txt
