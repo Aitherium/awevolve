@@ -5,7 +5,7 @@
   "url": "https://aitherium.github.io/awevolve/",
   "repository": "https://github.com/Aitherium/awevolve",
   "kind": "tool",
-  "status": "no-pages",
+  "status": "public",
   "adopt": "Point it at a file and a command that scores that file, and watch an agent improve it -- keeping every version and the score it earned.",
   "pairs_with": [
     "awdk",
@@ -14,15 +14,5 @@
     "awm",
     "awpredict"
   ],
-  "includes": [],
-  "metrics": {
-    "files": {
-      "value": 23,
-      "as_of": "2026-11-08T07:11:35-08:00"
-    },
-    "tests": {
-      "value": 1,
-      "as_of": "2026-11-08T07:11:35-08:00"
-    }
-  }
+  "includes": []
 }
