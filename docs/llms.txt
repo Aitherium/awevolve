@@ -25,6 +25,8 @@ Point it at a file and a command that scores that file, and watch an agent impro
 ## Where it lives
 
 - Repo: https://github.com/Aitherium/awevolve
+- Docs: https://aitherium.github.io/awevolve/
+- Manifest (keys + the one-line adoption story): https://aitherium.github.io/awevolve/aither-manifest.json
 
 This repository is mirrored from the AitherOS monorepo by `.github/workflows/sync-awevolve.yml`; hand edits made here are overwritten on the next sync — change the source instead.
 
